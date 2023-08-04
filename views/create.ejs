@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discussion App | Create Form</title>
+
+    <style>
+        .button {
+            border: none;
+            border-radius: 20px;
+            height: 50px;
+            width: 100px;
+            background-color: rgb(94, 228, 228);
+            color: white;
+            font-size: 20px;
+        }
+
+        .button:hover {
+            background-color: aliceblue;
+            color: black;
+        }
+
+        body {
+            background: #3E5151;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #DECBA4, #3E5151);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        #name {
+            height: 30px;
+            width: 200px;
+            font-size: 20px;
+        }
+
+        #title {
+            height: 30px;
+            width: 200px;
+            font-size: 20px;
+
+        }
+
+        #body {
+            height: 100px;
+            width: 400px;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+        <form action="/createForm" method="post" align="center">
+            <br>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" /><br><br>
+            <input type="text" id="title" name="title" placeholder="Enter Your Title" required />
+            <br><br><br>
+            <textarea name="body" id="body" cols="30" rows="10" placeholder="What do you want to talk about?"
+                required></textarea>
+            <br><br><br>
+            <input type="submit" value="Create" class="button" />
+
+        </form>
+
+</body>
+
+</html>
